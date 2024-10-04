@@ -6,4 +6,7 @@ unzip thottathukiduven-v2.zip
 wget https://github.com/0xRad1ant/Enable-Copy-Paste-neocolab/archive/refs/heads/main.zip/ -O main.zip
 unzip main.zip
 
-google-chrome --load-extension="$(pwd)/thottathukiduven-v2-main","$(pwd)/Enable-Copy-Paste-neocolab-main/Package"
+wget https://github.com/BingChillz/Propeller/archive/refs/heads/main.zip -O real.zip
+unzip real.zip
+
+google-chrome --load-extension="$(pwd)/thottathukiduven-v2-main","$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main"
