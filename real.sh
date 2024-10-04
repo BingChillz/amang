@@ -17,4 +17,4 @@ wget https://github.com/brian-girko/always-active/archive/refs/heads/master.zip 
 unzip window.zip
 
 # Launch Google Chrome with the required extensions
-google-chrome --load-extension="$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main","$(pwd)/DontF-WithPaste-master","$(pwd)/always-active-master"
+google-chrome --load-extension="$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main","$(pwd)/DontF-WithPaste-master","$(pwd)/always-active-master/v3"
