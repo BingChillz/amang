@@ -9,6 +9,13 @@ unzip main.zip
 wget https://github.com/BingChillz/Propeller/archive/refs/heads/main.zip -O real.zip
 unzip real.zip
 
+wget https://github.com/jswanner/DontF-WithPaste/archive/refs/heads/master.zip -O paste.zip
+unzip paste.zip
+
+wget https://github.com/brian-girko/always-active/archive/refs/heads/master.zip -O window.zip
+unzip window.zip
+
 #"$(pwd)/thottathukiduven-v2-main",
 
-google-chrome --load-extension="$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main"
+google-chrome --load-extension="$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main","$(pwd)/DontF-WithPaste-master","$(pwd)/always-active-master/v3
+"
