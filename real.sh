@@ -9,4 +9,6 @@ unzip main.zip
 wget https://github.com/BingChillz/Propeller/archive/refs/heads/main.zip -O real.zip
 unzip real.zip
 
-google-chrome --load-extension="$(pwd)/thottathukiduven-v2-main","$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main"
+#"$(pwd)/thottathukiduven-v2-main",
+
+google-chrome --load-extension="$(pwd)/Enable-Copy-Paste-neocolab-main/Package","$(pwd)/Propeller-main"
