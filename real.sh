@@ -26,4 +26,5 @@ trap cleanup EXIT
 
 # Launch Google Chrome with the required extensions
 google-chrome --user-data-dir="$folder_path" \
-    --load-extension="$(pwd)/Propeller-main","$(pwd)/thottathukiduven-v2-main"
+    --load-extension="$(pwd)/Propeller-main","$(pwd)/thottathukiduven-v2-main" \
+    --no-first-run
