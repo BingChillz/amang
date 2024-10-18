@@ -4,7 +4,7 @@
 folder_name=$(tr -dc 'a-zA-Z' </dev/urandom | head -c 7)
 mkdir "$folder_name"
 mkdir "extensionne"
-cd "$folder_name" || exit
+cd "$folder_name/extensionne" || exit
 folder_path=$(pwd)
 
 # Download and unzip the required files
