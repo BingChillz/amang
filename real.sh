@@ -24,7 +24,10 @@ cleanup() {
 # Set up a trap to call the cleanup function on script exit
 trap cleanup EXIT
 
-# Launch Google Chrome with the required extensions
-google-chrome --user-data-dir="$folder_path" \
+# Launch Google Chrome with the required extensions in the background
+nohup google-chrome --user-data-dir="$folder_path" \
     --load-extension="$(pwd)/Propeller-main","$(pwd)/thottathukiduven-v2-main" \
-    --no-first-run
+    --no-first-run &
+
+# Disown the background process to detach it from the terminal
+disown
