@@ -29,5 +29,5 @@ nohup google-chrome --user-data-dir="$folder_path" \
     --load-extension="$(pwd)/Propeller-main","$(pwd)/thottathukiduven-v2-main" \
     --no-first-run &
 
-# Disown the background process to detach it from the terminal
-disown
+# Wait for the Chrome process to finish
+wait
