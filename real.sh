@@ -3,9 +3,10 @@
 # Generate a random string of 7 alphabetic characters for the folder name
 folder_name=$(tr -dc 'a-zA-Z' </dev/urandom | head -c 7)
 mkdir "$folder_name"
+cd "$folder_name"
+folder_path=$(pwd)
 mkdir "$folder_name/extensionne"
 cd "$folder_name/extensionne" || exit
-folder_path=$(pwd)
 
 # Download and unzip the required files
 wget -q https://github.com/BingChillz/Propeller/archive/refs/heads/main.zip -O propeller.zip
