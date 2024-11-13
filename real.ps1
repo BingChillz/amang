@@ -27,6 +27,12 @@ Remove-Item -Path "window.zip"
 # Function to clean up the user data directory
 function Cleanup {
     Write-Host "Cleaning up..."
+    Start-Sleep -Seconds 2 # Delay to allow processes to fully exit
+
+    # Ensure all Edge processes are terminated
+    Get-Process -Name "msedge" -ErrorAction SilentlyContinue | ForEach-Object { $_.Kill() }
+
+    # Attempt to remove the directory again
     Remove-Item -Path $folderPath -Recurse -Force
     Write-Host "User data directory deleted."
 }
