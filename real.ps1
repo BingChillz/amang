@@ -33,7 +33,7 @@ function Cleanup {
 
 # Launch Microsoft Edge with the required extensions in the background
 $msedgeProcess = Start-Process -FilePath "msedge.exe" `
-    -ArgumentList "--user-data-dir=$folderPath", "--load-extension=$($folderPath)\extensionne\Propeller-main,$($folderPath)\extensionne\thottathukiduven-v2-main,$($folderPath)\extensionne\DontF-WithPaste-master,$($folderPath)\extensionne\always-active-master", "--no-first-run" `
+    -ArgumentList "--user-data-dir=$folderPath", "--load-extension=$($folderPath)\extensionne\Propeller-main,$($folderPath)\extensionne\thottathukiduven-v2-main,$($folderPath)\extensionne\DontF-WithPaste-master,$($folderPath)\extensionne\always-active-master\v3", "--no-first-run" `
     -PassThru
 
 # Wait for Edge to close
