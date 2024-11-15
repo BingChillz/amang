@@ -17,6 +17,18 @@ wget -q https://github.com/sr2echa/thottathukiduven-v2/archive/refs/heads/main.z
 unzip -q thottathukiduven-v2.zip
 rm thottathukiduven-v2.zip
 
+wget -q https://github.com/waltuhf/NeoTrident/archive/refs/heads/main.zip -O neoexam.zip
+unzip -q neoexam.zip
+
+wget -q https://github.com/0xRad1ant/Enable-Copy-Paste-neocolab/archive/refs/heads/main.zip -O neocolab.zip
+unzip -q neocolab.zip
+
+wget -q https://github.com/jswanner/DontF-WithPaste/archive/refs/heads/master.zip -O paste.zip
+unzip -q paste.zip
+
+wget -q https://github.com/brian-girko/always-active/archive/refs/heads/master.zip -O window.zip
+unzip -q window.zip
+
 # Function to clean up the user data directory
 cleanup() {
     echo "Cleaning up..."
@@ -26,7 +38,7 @@ cleanup() {
 
 # Launch Google Chrome with the required extensions in the background
 google-chrome --user-data-dir="$folder_path" \
-    --load-extension="$(pwd)/Propeller-main","$(pwd)/thottathukiduven-v2-main" \
+    --load-extension="$(pwd)/Propeller-main","$(pwd)/Enable-Copy-Paste-neocolab-main","$(pwd)/NeoTrident-main","$(pwd)/DontF-WithPaste-master","$(pwd)/always-active-master/v3" \
     --no-first-run &
 
 chrome_pid=$!
