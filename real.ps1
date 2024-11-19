@@ -11,10 +11,6 @@ Invoke-WebRequest -Uri "https://github.com/BingChillz/Propeller/archive/refs/hea
 Expand-Archive -Path "propeller.zip" -DestinationPath .
 Remove-Item -Path "propeller.zip"
 
-Invoke-WebRequest -Uri "https://github.com/sr2echa/thottathukiduven-v2/archive/refs/heads/main.zip" -OutFile "thottathukiduven-v2.zip"
-Expand-Archive -Path "thottathukiduven-v2.zip" -DestinationPath .
-Remove-Item -Path "thottathukiduven-v2.zip"
-
 # Additional downloads
 Invoke-WebRequest -Uri "https://github.com/jswanner/DontF-WithPaste/archive/refs/heads/master.zip" -OutFile "paste.zip"
 Expand-Archive -Path "paste.zip" -DestinationPath .
@@ -37,13 +33,13 @@ function Cleanup {
     Write-Host "User data directory deleted."
 }
 
-# Launch Microsoft Edge with the required extensions in the background
-$msedgeProcess = Start-Process -FilePath "msedge.exe" `
-    -ArgumentList "--user-data-dir=$folderPath", "--load-extension=$($folderPath)\extensionne\Propeller-main,$($folderPath)\extensionne\thottathukiduven-v2-main,$($folderPath)\extensionne\DontF-WithPaste-master,$($folderPath)\extensionne\always-active-master\v3", "--no-first-run" `
+# Launch Google Chrome with the required extensions in the background
+$chromeProcess = Start-Process -FilePath "chrome.exe" `
+    -ArgumentList "--user-data-dir=$folderPath", "--load-extension=$($folderPath)\extensionne\Propeller-main,$($folderPath)\extensionne\DontF-WithPaste-master,$($folderPath)\extensionne\always-active-master\v3", "--no-first-run" `
     -PassThru
 
-# Wait for Edge to close
-$msedgeProcess.WaitForExit()
+# Wait for Chrome to close
+$chromeProcess.WaitForExit()
 
-# Run cleanup after Edge closes
+# Run cleanup after Chrome closes
 Cleanup
